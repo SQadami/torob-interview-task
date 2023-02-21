@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="colorControlError" format="color|reference" />
+    <attr name="colorBackgroundDisable" format="color|reference" />
+    <attr name="colorBackgroundHighlight" format="color|reference" />
+    <attr name="colorBackgroundSearchBar" format="color|reference" />
+    <attr name="colorDivider" format="color|reference" />
+    <attr name="colorStroke" format="color|reference" />
+
+    <attr name="colorPrimary" format="color|reference" />
+    <attr name="colorAccent" format="color|reference" />
+    <attr name="selectableItemBackground" format="color|reference" />
+
+    <attr name="textColorError" format="color|reference" />
+    <attr name="textColorDisable" format="color|reference" />
+    <attr name="textColorActive" format="color|reference" />
+
+    <attr name="textAppearanceCaption1" format="reference" />
+    <attr name="textAppearanceCaption2" format="reference" />
+
+    <attr name="iconColorPrimary" format="color|reference" />
+    <attr name="iconColorSecondary" format="color|reference" />
+    <attr name="iconColorTertiary" format="color|reference" />
+    <attr name="iconColorHighlight" format="color|reference" />
+    <attr name="iconColorPrimaryInverse" format="color|reference" />
+    <attr name="iconColorSelected" format="color|reference" />
+    <attr name="iconColorDisable" format="color|reference" />
+</resources>

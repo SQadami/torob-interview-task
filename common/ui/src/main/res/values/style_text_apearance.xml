@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Headline1" parent="">
+        <item name="android:textSize">40sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Headline2" parent="">
+        <item name="android:textSize">32sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Headline3" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Headline4" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Headline5" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="TextAppearance.Headline6" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Subtitle1" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Subtitle2" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Body1" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="TextAppearance.Body2" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="TextAppearance.Caption1" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="TextAppearance.Caption2" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Button" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="TextAppearance.Overline" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="TextAppearance.Overline1" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="TextAppearance.Overline2" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="TextAppearance.Toast" parent="TextAppearance.Body2">
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
+    </style>
+</resources>

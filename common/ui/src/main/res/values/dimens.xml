@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="divider_height">1px</dimen>
+    <dimen name="stroke_width">0.5dp</dimen>
+    <dimen name="stroke_thick">1.5dp</dimen>
+    <dimen name="checkbox">32dp</dimen>
+    <dimen name="modal_top_margin">-24dp</dimen>
+    <dimen name="toolbar_title_image_drawable">42dp</dimen>
+
+    <!---->
+    <!-- Spacing -->
+    <!---->
+    <dimen name="spacing_xmall">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+
+    <!---->
+    <!-- CardView -->
+    <!---->
+    <dimen name="card_elevation">0.5dp</dimen>
+    <dimen name="card_offset_small">8dp</dimen>
+    <dimen name="card_offset_medium">16dp</dimen>
+    <dimen name="card_offset_large">24dp</dimen>
+    <dimen name="card_offset_xlarge">32dp</dimen>
+
+    <!---->
+    <!-- CardView -->
+    <!---->
+    <dimen name="corner_radius_small">6dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_large">16dp</dimen>
+    <dimen name="corner_radius_xlarge">24dp</dimen>
+    <dimen name="corner_radius_modal">24dp</dimen>
+
+    <!---->
+    <!-- Button -->
+    <!---->
+    <dimen name="button_xsmall">32dp</dimen>
+    <dimen name="button_small">40dp</dimen>
+    <dimen name="button_medium">48dp</dimen>
+    <dimen name="button_large">56dp</dimen>
+    <dimen name="button_width_small">128dp</dimen>
+</resources>

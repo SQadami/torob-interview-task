@@ -1,0 +1,152 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorError">@color/colorError</item>
+
+        <item name="colorOnSurface">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorControl</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="rippleColor">@color/colorControlHighlight</item>
+        <item name="colorDivider">@color/colorDivider</item>
+        <item name="colorStroke">@color/colorStroke</item>
+
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="colorBackgroundDisable">@color/colorBackgroundDisable</item>
+        <item name="colorBackgroundHighlight">@color/colorBackgroundHighlight</item>
+        <item name="colorBackgroundSearchBar">@color/colorBackgroundSearchBar</item>
+
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+        <item name="android:textColorHighlight">@color/textColorHighlight</item>
+        <item name="android:textColorHint">@color/textColorHint</item>
+        <item name="tabSelectedTextColor">@color/textColorSelected</item>
+        <item name="textColorError">@color/textColorError</item>
+        <item name="textColorDisable">@color/textColorDisable</item>
+        <item name="textColorActive">@color/textColorActive</item>
+
+        <item name="iconColorPrimary">@color/iconColorPrimary</item>
+        <item name="iconColorSecondary">@color/iconColorSecondary</item>
+        <item name="iconColorTertiary">@color/iconColorTertiary</item>
+        <item name="iconColorHighlight">@color/iconColorHighlight</item>
+        <item name="iconColorPrimaryInverse">@color/iconColorPrimaryInverse</item>
+        <item name="iconColorSelected">@color/iconColorSelected</item>
+        <item name="iconColorDisable">@color/iconColorDisable</item>
+
+        <item name="cardBackgroundColor">@color/colorCardBackground</item>
+
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Body2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Caption1</item>
+        <item name="textAppearanceCaption1">@style/TextAppearance.Caption1</item>
+        <item name="textAppearanceCaption2">@style/TextAppearance.Caption2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Overline</item>
+
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceLargeComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceMediumComponent</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearanceSmallComponent</item>
+
+        <item name="toolbarStyle">@style/Widget.Toolbar</item>
+        <item name="drawerArrowStyle">@style/Widget.DrawerArrow</item>
+        <item name="imageButtonStyle">@style/Base.Widget.Button.ImageButton</item>
+        <item name="textInputStyle">@style/Widget.TextInputLayout.OutLineBox</item>
+        <item name="radioButtonStyle">@style/Widget.RadioButton</item>
+        <item name="checkboxStyle">@style/Widget.CheckBox</item>
+        <item name="chipStyle">@style/Widget.Chip.Tag.Simple</item><!-- TODO: why?? -->
+    </style>
+
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/bg_launch_screen</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
+
+    <style name="Theme.BottomSheetDialog.Input" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Design.BottomSheetDialog.Input</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorError">@color/colorError</item>
+
+        <item name="colorOnSurface">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorControl</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="rippleColor">@color/colorControlHighlight</item>
+        <item name="colorDivider">@color/colorDivider</item>
+        <item name="colorStroke">@color/colorStroke</item>
+
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorBackgroundDisable">@color/colorBackgroundDisable</item>
+        <item name="colorBackgroundHighlight">@color/colorBackgroundHighlight</item>
+        <item name="colorBackgroundSearchBar">@color/colorBackgroundSearchBar</item>
+
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+        <item name="android:textColorHighlight">@color/textColorHighlight</item>
+        <item name="android:textColorHint">@color/textColorHint</item>
+        <item name="tabSelectedTextColor">@color/textColorSelected</item>
+        <item name="textColorError">@color/textColorError</item>
+        <item name="textColorDisable">@color/textColorDisable</item>
+        <item name="textColorActive">@color/textColorActive</item>
+
+        <item name="iconColorPrimary">@color/iconColorPrimary</item>
+        <item name="iconColorSecondary">@color/iconColorSecondary</item>
+        <item name="iconColorTertiary">@color/iconColorTertiary</item>
+        <item name="iconColorHighlight">@color/iconColorHighlight</item>
+        <item name="iconColorPrimaryInverse">@color/iconColorPrimaryInverse</item>
+        <item name="iconColorSelected">@color/iconColorSelected</item>
+        <item name="iconColorDisable">@color/iconColorDisable</item>
+
+        <item name="cardBackgroundColor">@color/colorCardBackground</item>
+
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Body2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Caption1</item>
+        <item name="textAppearanceCaption1">@style/TextAppearance.Caption1</item>
+        <item name="textAppearanceCaption2">@style/TextAppearance.Caption2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Overline</item>
+
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceLargeComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceMediumComponent</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearanceSmallComponent</item>
+
+        <item name="toolbarStyle">@style/Widget.Toolbar</item>
+        <item name="drawerArrowStyle">@style/Widget.DrawerArrow</item>
+        <item name="imageButtonStyle">@style/Base.Widget.Button.ImageButton</item>
+        <item name="textInputStyle">@style/Widget.TextInputLayout.OutLineBox</item>
+        <item name="radioButtonStyle">@style/Widget.RadioButton</item>
+        <item name="checkboxStyle">@style/Widget.CheckBox</item>
+    </style>
+</resources>

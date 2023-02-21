@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.AppBar" parent="Widget.MaterialComponents.AppBarLayout.Surface">
+        <item name="android:background">?android:colorBackground</item>
+    </style>
+
+    <style name="Widget.AppBar.Unelevated" parent="Widget.AppBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.AppBar.LiftOnScroll" parent="Widget.AppBar">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="liftOnScroll">true</item>
+    </style>
+
+    <style name="Widget.DrawerArrow" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">?iconColorPrimary</item>
+    </style>
+
+    <style name="Widget.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="titleTextAppearance">?textAppearanceHeadline5</item>
+        <item name="titleTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Base.Widget.Button.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="rippleColor">@color/colorControlHighlight</item>
+    </style>
+
+    <style name="Widget.Button.ImageButton" parent="Base.Widget.Button.ImageButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="backgroundTintMode">src_in</item>
+    </style>
+
+    <style name="Widget.Button.ImageButton.Small" parent="Widget.Button.ImageButton">
+        <item name="android:minHeight">32dp</item>
+        <item name="android:minWidth">32dp</item>
+    </style>
+
+    <style name="Widget.Button.ImageButton.Appbar" parent="Base.Widget.Button.ImageButton">
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:layout_width">?actionBarSize</item>
+    </style>
+
+    <style name="Widget.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textColor">@color/color_text_button</item>
+        <item name="android:textAppearance">@style/TextAppearance.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearanceSmallComponent</item>
+        <item name="iconTint">@color/color_icon_button</item>
+        <item name="iconTintMode">src_in</item>
+    </style>
+
+    <style name="Widget.Button.Appbar" parent="Widget.Button.TextButton">
+        <item name="android:minWidth">?actionBarSize</item>
+        <item name="minWidth">?actionBarSize</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.SharpCorner</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="Widget.Button.TextButton.Small" parent="Widget.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Caption2</item>
+    </style>
+
+    <style name="Widget.Button.TextButton.NoHorizontalPadding" parent="Widget.Button.TextButton">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="Widget.Button.TextButton.Error" parent="Widget.Button.TextButton">
+        <item name="android:textColor">@color/color_text_button_error</item>
+        <item name="rippleColor">@color/colorControlError</item>
+        <item name="drawableTint">@color/color_text_button_error</item>
+        <item name="drawableTintMode">src_in</item>
+    </style>
+
+    <style name="Widget.Button.TextButton.Dialog" parent="Widget.Button.TextButton">
+        <item name="android:minWidth">64dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Widget.Button.Primary" parent="Widget.Button.TextButton">
+        <item name="backgroundTint">@color/color_background_button_primary
+        </item>
+        <item name="iconTint">@color/textColorPrimaryInverse</item>
+        <item name="iconTintMode">src_in</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_text_button_primary</item>
+    </style>
+
+    <style name="Widget.Button.Secondary" parent="Widget.Button.TextButton">
+        <item name="android:gravity">center</item>
+        <item name="background">@android:color/white</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="strokeColor">?colorStroke</item>
+        <item name="strokeWidth">@dimen/stroke_width</item>
+    </style>
+
+    <style name="Widget.Button.Secondary.Error" parent="Widget.Button.Secondary">
+        <item name="android:textColor">@color/color_text_button_error</item>
+        <item name="strokeColor">@color/color_text_button_error</item>
+        <item name="rippleColor">@color/colorControlError</item>
+    </style>
+
+    <style name="Widget.Divider" parent="">
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:background">?colorDivider</item>
+    </style>
+
+    <style name="Widget.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/compound_button_selector</item>
+        <item name="buttonTintMode">src_in</item>
+    </style>
+
+    <style name="Widget.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="shapeAppearance">@style/ShapeAppearanceSmallComponent</item>
+        <item name="buttonTint">@color/compound_button_selector</item>
+        <item name="buttonTintMode">src_in</item>
+    </style>
+
+    <style name="Base.Widget.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearance">@style/ShapeAppearanceSmallComponent</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="cardBackgroundColor">@color/colorCardBackground</item>
+    </style>
+
+    <style name="Widget.CardView" parent="Base.Widget.CardView">
+        <item name="cardElevation">2dp</item>
+    </style>
+
+    <style name="Widget.CardView.Unelevated" parent="Base.Widget.CardView">
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="Widget.CardView.Bordered" parent="Base.Widget.CardView">
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="strokeColor">?colorStroke</item>
+        <item name="strokeWidth">@dimen/stroke_width</item>
+    </style>
+
+    <style name="Base.Widget.CardView.Simple" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearance">@style/ShapeAppearanceSmallComponent</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="cardBackgroundColor">@color/colorCardBackground</item>
+    </style>
+
+    <style name="Widget.CardView.Sharp.elevated" parent="Widget.CardView">
+        <item name="shapeAppearance">@style/ShapeAppearance.SharpCorner</item>
+        <item name="elevation">16dp</item>
+    </style>
+
+    <style name="Widget.CardView.Grid" parent="Widget.CardView.Sharp.elevated">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="strokeColor">@color/color_card_stroke</item>
+        <item name="strokeWidth">@dimen/stroke_thick</item>
+    </style>
+
+    <style name="Widget.ProgressBar" parent="android:Widget.Holo.ProgressBar">
+        <item name="drawableTint">?colorError</item>
+        <item name="drawableTintMode">src_in</item>
+    </style>
+
+    <style name="Widget.Chip.Action" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="android:checkable">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAppearance">@style/TextAppearance.Body2</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="chipBackgroundColor">@color/colorCardBackground</item>
+        <item name="chipIconVisible">false</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="closeIconVisible">false</item>
+    </style>
+
+    <style name="Widget.Chip.Choice" parent="Widget.Chip.Action">
+        <item name="android:checkable">true</item>
+        <item name="closeIcon">@drawable/ic_close_outlined_18dp</item>
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceSmallComponent
+        </item>
+        <item name="chipBackgroundColor">@color/color_chip_choice_background</item>
+        <item name="chipStrokeColor">@color/color_chip_choice_stroke</item>
+        <item name="chipStrokeWidth">@dimen/stroke_width</item>
+    </style>
+
+    <style name="Widget.Chip.Tag" parent="Widget.Chip.Action">
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/textColorHighlight</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:stateListAnimator">
+            @animator/unelevated_state_list_anim
+        </item>
+        <item name="android:textAppearance">@style/TextAppearance.Caption1</item>
+        <item name="chipMinTouchTargetSize">24dp</item>
+        <item name="chipMinHeight">24dp</item>
+        <item name="chipBackgroundColor">@color/colorBackgroundHighlight</item>
+        <item name="chipStrokeColor">@color/textColorHighlight</item>
+        <item name="chipStrokeWidth">@dimen/stroke_width</item>
+        <item name="chipStartPadding">6dp</item>
+        <item name="chipEndPadding">6dp</item>
+        <item name="textStartPadding">4dp</item>
+        <item name="textEndPadding">4dp</item>
+    </style>
+
+    <style name="Widget.Chip.Tag.Simple" parent="">
+        <item name="chipEndPadding">4dp</item>
+        <item name="chipStartPadding">4dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="chipCornerRadius">4dp</item>
+        <item name="chipStrokeColor">@color/colorStroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="chipBackgroundColor">@color/colorBackgroundSearchBar</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+
+    <style name="Widget.Chip.Selector.Holo" parent="Widget.Chip.Choice">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:closeIcon">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.Subtitle2</item>
+    </style>
+
+    <style name="Widget.TextInputLayout.OutLineBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius_small</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_small</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_small</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_small</item>
+        <item name="android:textColorHint">@color/color_text_hint</item>
+        <item name="boxStrokeErrorColor">?colorError</item>
+        <item name="boxStrokeColor">?android:textColorPrimary</item>
+        <item name="hintTextAppearance">?textAppearanceCaption1</item>
+        <item name="hintTextColor">@color/color_text_hint</item>
+        <item name="helperTextTextAppearance">?textAppearanceCaption1</item>
+        <item name="helperTextTextColor">?android:textColorSecondary</item>
+        <item name="errorTextAppearance">?textAppearanceCaption1</item>
+        <item name="errorTextColor">?textColorError</item>
+        <item name="endIconTint">#616161</item>
+        <item name="startIconTint">#616161</item>
+        <item name="endIconTintMode">src_in</item>
+        <item name="startIconTintMode">src_in</item>
+    </style>
+
+    <style name="Widget.TextInputLayout.EditText" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Caption1</item>
+    </style>
+
+    <style name="Widget.EditText" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:textAppearance">@style/TextAppearance.Body1</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+    </style>
+
+    <style name="Widget.EditText.Transparent" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAppearance">@style/TextAppearance.Body2</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+    </style>
+
+    <style name="Widget.PageIndicator" parent="">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="dotsColor">#80333333</item>
+        <item name="dotsCornerRadius">8dp</item>
+        <item name="dotsSize">8dp</item>
+        <item name="dotsSpacing">2dp</item>
+        <item name="selectedDotColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Widget.Button.DashedLine" parent="Widget.Button.TextButton">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_dashed_line</item>
+        <item name="background">@drawable/bg_dashed_line</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="Widget.TextView.LabelPersonalInfo" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Subtitle2</item>
+        <item name="android:textColor">#959494</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_down</item>
+        <item name="drawableTint">#959494</item>
+    </style>
+
+    <style name="Widget.TextView.LabelPersonalInfoWithoutArrowDown" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Subtitle2</item>
+        <item name="android:textColor">#959494</item>
+        <item name="drawableTint">#959494</item>
+    </style>
+
+    <style name="Widget.RadioButton.Holo" parent="Widget.RadioButton">
+        <item name="android:background">@drawable/selector_compound_button_holo</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:textAppearance">?textAppearanceCaption1</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Widget.RadioButton.Selector" parent="Widget.RadioButton.Holo">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.Subtitle2</item>
+    </style>
+
+    <style name="Widget.CheckBox.Holo" parent="Widget.CheckBox">
+        <item name="android:background">@drawable/selector_compound_button_holo</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:textAppearance">?textAppearanceCaption1</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Widget.CheckBox.Grid" parent="Widget.CheckBox.Holo">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+</resources>
