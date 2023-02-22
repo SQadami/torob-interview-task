@@ -12,6 +12,7 @@ enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
 include(
     ":app",
+    ":data",
     ":common:core",
     ":common:ui",
     ":common:imageloader"
