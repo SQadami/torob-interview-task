@@ -8,6 +8,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.daggerHilt)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.cacheFixPlugin)
@@ -66,12 +67,6 @@ android {
             isMinifyEnabled = true
             proguardFiles("proguard-rules.pro")
         }
-    }
-}
-
-tasks.withType<KotlinCompilationTask<*>> {
-    compilerOptions {
-        freeCompilerArgs.add("-opt-in=com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi")
     }
 }
 
