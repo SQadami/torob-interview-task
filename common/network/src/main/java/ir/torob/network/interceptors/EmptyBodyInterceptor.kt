@@ -1,7 +1,6 @@
-package ir.torob.core.network.interceptors
+package ir.torob.network.interceptors
 
-import ir.torob.core.exception.NoContentException
-import ir.torob.core.network.StatusCode
+import ir.torob.network.StatusCode
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.Response

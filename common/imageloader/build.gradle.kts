@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    implementation(projects.common.core)
+    implementation(projects.common.network)
 
     api(libs.glide)
     kapt(libs.glide.compiler)

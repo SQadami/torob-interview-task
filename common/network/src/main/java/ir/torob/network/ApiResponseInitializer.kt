@@ -1,9 +1,9 @@
-package ir.torob.core.network
+package ir.torob.network
 
-import ir.torob.core.network.coroutines.CoroutinesResponseCallAdapterFactory
-import ir.torob.core.network.operators.ApiResponseOperator
-import ir.torob.core.network.operators.ApiResponseSuspendOperator
-import ir.torob.core.network.operators.IOperator
+import ir.torob.network.coroutines.CoroutinesResponseCallAdapterFactory
+import ir.torob.network.operators.ApiResponseOperator
+import ir.torob.network.operators.ApiResponseSuspendOperator
+import ir.torob.network.operators.IOperator
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

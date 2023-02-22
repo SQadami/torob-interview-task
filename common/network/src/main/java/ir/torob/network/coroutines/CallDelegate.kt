@@ -1,6 +1,6 @@
-package ir.torob.core.network.coroutines
+package ir.torob.network.coroutines
 
-import ir.torob.core.network.ApiResponseInitializer
+import ir.torob.network.ApiResponseInitializer
 import okhttp3.Request
 import okio.Timeout
 import retrofit2.Call

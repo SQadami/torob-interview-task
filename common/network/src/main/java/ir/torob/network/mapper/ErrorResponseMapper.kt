@@ -1,8 +1,8 @@
-package ir.torob.core.network.mapper
+package ir.torob.network.mapper
 
-import ir.torob.core.network.ApiResponse
-import ir.torob.core.network.message
-import ir.torob.core.network.model.ApiErrorResponse
+import ir.torob.network.ApiResponse
+import ir.torob.network.message
+import ir.torob.network.model.ApiErrorResponse
 
 /**
  * A mapper for mapping [ApiResponse.Failure.Error] response as custom [ApiErrorResponse] instance.

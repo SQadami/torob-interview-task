@@ -1,4 +1,4 @@
-package ir.torob.core.network
+package ir.torob.network
 
 /**
  * This is a list of Hypertext Transfer Protocol (HTTP) response status codes.

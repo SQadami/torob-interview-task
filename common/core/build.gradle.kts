@@ -28,10 +28,5 @@ dependencies {
     implementation(libs.androidx.coreKtx)
     implementation(libs.androidx.securityCypto)
 
-    api(libs.okhttp.okhttp)
-    api(libs.okhttp.loggingInterceptor)
-    api(libs.retrofit.retrofit)
-    api(libs.retrofit.moshiConverter)
-
     implementation(libs.androidx.fragmentKtx)
 }

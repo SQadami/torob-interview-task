@@ -2,17 +2,17 @@
 @file:JvmName("ResponseTransformer")
 @file:JvmMultifileClass
 
-package ir.torob.core.network
+package ir.torob.network
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import ir.torob.core.network.coroutines.SuspensionFunction
-import ir.torob.core.network.mapper.ApiErrorModelMapper
-import ir.torob.core.network.mapper.ApiSuccessModelMapper
-import ir.torob.core.network.mapper.ErrorResponseMapper
-import ir.torob.core.network.model.ApiErrorResponse
-import ir.torob.core.network.operators.ApiResponseOperator
-import ir.torob.core.network.operators.ApiResponseSuspendOperator
+import ir.torob.network.coroutines.SuspensionFunction
+import ir.torob.network.mapper.ApiErrorModelMapper
+import ir.torob.network.mapper.ApiSuccessModelMapper
+import ir.torob.network.mapper.ErrorResponseMapper
+import ir.torob.network.model.ApiErrorResponse
+import ir.torob.network.operators.ApiResponseOperator
+import ir.torob.network.operators.ApiResponseSuspendOperator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob

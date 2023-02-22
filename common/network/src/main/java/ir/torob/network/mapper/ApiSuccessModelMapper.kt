@@ -1,6 +1,6 @@
-package ir.torob.core.network.mapper
+package ir.torob.network.mapper
 
-import ir.torob.core.network.ApiResponse
+import ir.torob.network.ApiResponse
 
 /**
  * A mapper interface for mapping [ApiResponse.Success] response as a custom [V] instance model.

@@ -4,8 +4,6 @@
     "UNCHECKED_CAST"
 )
 
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.daggerHilt)
@@ -74,6 +72,7 @@ dependencies {
 
     implementation(projects.common.core)
     implementation(projects.common.ui)
+    implementation(projects.common.network)
     implementation(projects.common.imageloader)
 
     implementation(libs.androidx.navigation)

@@ -1,5 +1,4 @@
-package ir.torob.core.network;
-
+package ir.torob.network;
 
 import android.util.JsonReader;
 import android.util.JsonToken;

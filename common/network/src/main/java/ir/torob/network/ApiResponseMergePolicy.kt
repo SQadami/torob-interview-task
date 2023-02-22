@@ -1,4 +1,4 @@
-package ir.torob.core.network
+package ir.torob.network
 
 /**
  * [ApiResponseMergePolicy] is a policy for merging response data depend on the success or not.

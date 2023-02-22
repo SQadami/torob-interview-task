@@ -1,6 +1,6 @@
-package ir.torob.core.network.coroutines
+package ir.torob.network.coroutines
 
-import ir.torob.core.network.ApiResponse
+import ir.torob.network.ApiResponse
 import retrofit2.Call
 import retrofit2.CallAdapter
 import retrofit2.Retrofit

@@ -15,6 +15,7 @@ include(
     ":data",
     ":common:core",
     ":common:ui",
+    ":common:network",
     ":common:imageloader"
 )
 

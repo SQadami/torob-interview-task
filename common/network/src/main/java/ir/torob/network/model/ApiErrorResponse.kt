@@ -1,4 +1,4 @@
-package ir.torob.core.network.model
+package ir.torob.network.model
 
 /**
  * A customized api error response.

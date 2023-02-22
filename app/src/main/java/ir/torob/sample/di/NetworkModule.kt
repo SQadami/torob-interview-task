@@ -11,7 +11,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import ir.torob.core.Const.API_URL
 import ir.torob.core.Const.TIMEOUT
-import ir.torob.core.network.coroutines.CoroutinesResponseCallAdapterFactory
+import ir.torob.network.coroutines.CoroutinesResponseCallAdapterFactory
 import ir.torob.sample.BuildConfig
 import okhttp3.Cache
 import okhttp3.ConnectionPool

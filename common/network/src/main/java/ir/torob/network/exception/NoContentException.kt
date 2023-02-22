@@ -1,6 +1,6 @@
-package ir.torob.core.exception
+package ir.torob.network.exception
 
-import ir.torob.core.network.interceptors.EmptyBodyInterceptor
+import ir.torob.network.interceptors.EmptyBodyInterceptor
 
 /**
  * Thrown by various accessor methods to indicate that the response body being requested

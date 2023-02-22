@@ -1,6 +1,6 @@
-package ir.torob.core.network.operators
+package ir.torob.network.operators
 
-import ir.torob.core.network.ApiResponse
+import ir.torob.network.ApiResponse
 
 /**
  * ApiResponseSuspendOperator operates on an [ApiResponse] which should be handled in the suspension scope.
