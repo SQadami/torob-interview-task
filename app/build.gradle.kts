@@ -39,6 +39,8 @@ android {
 
     buildFeatures {
         buildConfig = true
+        dataBinding = true
+        viewBinding = true
     }
 
     packagingOptions {
@@ -75,7 +77,18 @@ tasks.withType<KotlinCompilationTask<*>> {
 
 dependencies {
 
+    implementation(projects.common.core)
+    implementation(projects.common.ui)
+    implementation(projects.common.imageloader)
 
+    implementation(libs.androidx.navigation)
+    implementation(libs.androidx.navigation.fragment)
+
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+
+    implementation(libs.moshi)
+    kapt(libs.moshi.codegen)
 }
 
 fun <T : Any> propOrDef(propertyName: String, defaultValue: T): T {
