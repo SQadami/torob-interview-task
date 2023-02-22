@@ -24,7 +24,7 @@ fun MaterialButton.showProgress(
     icon = if (showProgress == true) {
         CircularProgressDrawable(context!!).apply {
             setStyle(CircularProgressDrawable.LARGE)
-            setColorSchemeColors(context.colorFromAttr(R.attr.colorAccent))
+            setColorSchemeColors(context.colorFromAttr(com.google.android.material.R.attr.colorAccent))
             start()
         }
     } else iconSource

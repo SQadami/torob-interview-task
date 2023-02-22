@@ -295,7 +295,7 @@ abstract class BaseDotsIndicator @JvmOverloads constructor(
 
     fun Context.getThemePrimaryColor(): Int {
         val value = TypedValue()
-        this.theme.resolveAttribute(R.attr.colorPrimary, value, true)
+        this.theme.resolveAttribute(com.google.android.material.R.attr.colorPrimary, value, true)
         return value.data
     }
 

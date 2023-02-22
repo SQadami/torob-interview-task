@@ -8,7 +8,7 @@ import ir.torob.ui.extension.stringRes
 fun MaterialButton.startLoading() {
     isEnabled = false
     showProgress {
-        progressColor = context.colorFromAttr(R.attr.colorAccent)
+        progressColor = context.colorFromAttr(com.google.android.material.R.attr.colorAccent)
         gravity = DrawableButton.GRAVITY_CENTER
     }
 }

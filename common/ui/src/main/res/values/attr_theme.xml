@@ -8,10 +8,6 @@
     <attr name="colorDivider" format="color|reference" />
     <attr name="colorStroke" format="color|reference" />
 
-    <attr name="colorPrimary" format="color|reference" />
-    <attr name="colorAccent" format="color|reference" />
-    <attr name="selectableItemBackground" format="color|reference" />
-
     <attr name="textColorError" format="color|reference" />
     <attr name="textColorDisable" format="color|reference" />
     <attr name="textColorActive" format="color|reference" />

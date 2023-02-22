@@ -7,7 +7,6 @@ import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.databinding.ViewStubProxy
-import ir.torob.ui.R
 import ir.torob.ui.SafeOnClickListener
 
 fun View.visible() {
@@ -33,7 +32,11 @@ fun View.onClick(safe: Boolean = true, action: (View) -> Unit) =
     setOnClickListener(SafeOnClickListener(safe, action))
 
 fun View.addRipple() = with(TypedValue()) {
-    context.theme.resolveAttribute(R.attr.selectableItemBackground, this, true)
+    context.theme.resolveAttribute(
+        com.google.android.material.R.attr.selectableItemBackground,
+        this,
+        true
+    )
     setBackgroundResource(resourceId)
 }
 
