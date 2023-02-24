@@ -5,6 +5,7 @@
     <attr name="colorBackgroundDisable" format="color|reference" />
     <attr name="colorBackgroundHighlight" format="color|reference" />
     <attr name="colorBackgroundSearchBar" format="color|reference" />
+    <attr name="colorBackgroundHolo" format="color|reference" />
     <attr name="colorDivider" format="color|reference" />
     <attr name="colorStroke" format="color|reference" />
 

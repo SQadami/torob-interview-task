@@ -59,7 +59,7 @@ class ExpandableCard @JvmOverloads constructor(
             ContextCompat.getColor(
                 context,
                 if (isExpanded) R.color.colorPrimary
-                else R.color.blue_400
+                else R.color.colorBackgroundHolo
             )
         )
         toExpandView?.run { visibleIf(isExpanded) }

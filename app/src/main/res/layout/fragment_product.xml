@@ -15,7 +15,7 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorBackgroundHolo"
+            android:background="?colorBackgroundHolo"
             app:layoutManager="ir.torob.ui.widget.recyclerview.layout_manager.GridManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:spanCount="2" />

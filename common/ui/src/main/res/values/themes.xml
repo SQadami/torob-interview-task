@@ -18,6 +18,7 @@
         <item name="colorBackgroundDisable">@color/colorBackgroundDisable</item>
         <item name="colorBackgroundHighlight">@color/colorBackgroundHighlight</item>
         <item name="colorBackgroundSearchBar">@color/colorBackgroundSearchBar</item>
+        <item name="colorBackgroundHolo">@color/colorBackgroundHolo</item>
 
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
@@ -101,6 +102,7 @@
         <item name="colorBackgroundDisable">@color/colorBackgroundDisable</item>
         <item name="colorBackgroundHighlight">@color/colorBackgroundHighlight</item>
         <item name="colorBackgroundSearchBar">@color/colorBackgroundSearchBar</item>
+        <item name="colorBackgroundHolo">@color/colorBackgroundHolo</item>
 
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>

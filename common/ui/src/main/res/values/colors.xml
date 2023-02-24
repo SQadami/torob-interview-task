@@ -46,6 +46,4 @@
     <color name="iconColorSelected">#EB625D</color>
     <color name="iconColorPrimaryInverse">#FFFFFF</color>
     <color name="iconColorDisable">#610C1826</color>
-
-    <color name="blue_400">#CDD6EA</color>
 </resources>
