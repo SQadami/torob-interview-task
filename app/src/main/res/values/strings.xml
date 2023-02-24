@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Torob sample app</string>
     <string name="try_again">Try again</string>
+    <string name="btn_price_change_notif">اطلاع از تغییر قیمت</string>
 </resources>
