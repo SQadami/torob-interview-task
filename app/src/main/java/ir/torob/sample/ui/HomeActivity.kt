@@ -28,7 +28,7 @@ class HomeActivity : BindingActivity<ActivityHomeBinding>() {
         val inflater = navHostFragment.navController.navInflater
         val graph = inflater.inflate(R.navigation.nav_graph_home)
 
-        graph.startDestination = R.id.product_fragment
+        graph.setStartDestination(R.id.product_fragment)
 
         val navController = navHostFragment.navController
         navController.setGraph(graph, intent.extras)

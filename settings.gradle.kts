@@ -12,7 +12,10 @@ enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
 include(
     ":app",
-    ":data",
+    ":data:model",
+    ":data:db",
+    ":data:product",
+    ":domain",
     ":common:core",
     ":common:ui",
     ":common:network",
