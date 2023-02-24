@@ -17,6 +17,7 @@ import ir.torob.sample.ui.product.adapter.ProductGridDecoration
 import ir.torob.sample.ui.product.adapter.ProductLoadStateAdapter
 import ir.torob.sample.ui.product.adapter.SimilarProductAdapter
 import ir.torob.sample.ui.product.detail.ProductDetailAdapter
+import ir.torob.sample.util.navArgs
 import ir.torob.ui.binding.BindingFragment
 import ir.torob.ui.extension.dimenRes
 import ir.torob.ui.extension.onClick
@@ -28,6 +29,7 @@ import ir.torob.ui.widget.snackbar.showSnackBar
 class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragment_product) {
 
     private val viewModel: ProductViewModel by viewModels()
+    private val args: ProductFragmentArgs by navArgs()
 
     private val itemClickListener = object : SimilarProductAdapter.OnItemClickListener {
         override fun onItemClicked(product: SimilarEntryWithProduct) {
@@ -35,7 +37,9 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
         }
     }
     private val similarProductAdapter = SimilarProductAdapter(itemClickListener)
-    private val productDetailAdapter = ProductDetailAdapter()
+    private val productDetailAdapter = ProductDetailAdapter().apply {
+        initProductDetail(args.productKey)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -83,22 +87,12 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
 
     private fun initData() =
         viewModel.let { vm ->
-            vm.isLoading.observeWithLifecycle(this) {
-                binding.progressBar.visibleIf(it)
-            }
-            vm.pendingActions.observeWithLifecycle(this) {
-                it?.runOnContent {
-                    when (this) {
-                        is ErrorMessageAction -> showSnackBar(message)
-                    }
-                }
-            }
             vm.similarProductPagination.observeWithLifecycle(this) {
                 similarProductAdapter.submitData(lifecycle, it)
             }
             vm.productDetail.observeWithLifecycle(this) {
                 binding.layoutAppbar.title.text = it.name1
-                productDetailAdapter.setItems(listOf(it))
+                productDetailAdapter.setProduct(it)
             }
         }
 

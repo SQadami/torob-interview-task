@@ -4,7 +4,8 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?android:colorBackground">
 
         <include
             android:id="@+id/layout_appbar"
@@ -18,14 +19,5 @@
             app:layoutManager="ir.torob.ui.widget.recyclerview.layout_manager.GridManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:spanCount="2" />
-
-        <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="?actionBarSize"
-            android:indeterminate="true"
-            android:padding="32dp" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
