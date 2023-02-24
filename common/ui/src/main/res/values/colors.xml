@@ -12,7 +12,7 @@
     <color name="colorBackgroundDisable">#1F0C1826</color>
     <color name="colorBackgroundHighlight">#0DEB625D</color>
     <color name="colorBackgroundSearchBar">#ECEFF1</color>
-    <color name="colorBackgroundHolo">#F6F6F6</color>
+    <color name="colorBackgroundHolo">#F2F3F5</color>
     <color name="colorSnackBarBackground">#0C1826</color>
     <color name="colorCardBackground">#FFFFFF</color>
     <color name="colorDivider">#F0F1F5</color>
@@ -23,33 +23,29 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- - - - - - - - - - - - - - - - - - - Text colors - - - - - - - - - - - - - - - - - - - - -->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <color name="textColorPrimary">#010101</color>
+    <color name="textColorPrimary">#1A1A1A</color>
     <color name="textColorPrimaryInverse">#FFFFFF</color>
-    <color name="textColorSecondary">#1D1F25</color>
-    <color name="textColorTertiary">#3E96AC</color>
+    <color name="textColorSecondary">#333333</color>
+    <color name="textColorTertiary">#666666</color>
+    <color name="textColorFourth">#666666</color>
     <color name="textColorDisable">#610C1826</color>
     <color name="textColorHint">#959494</color>
-    <color name="textColorHighlight">#EB625D</color>
+    <color name="textColorHighlight">#D73948</color>
     <color name="textColorError">#FB2F5F</color>
     <color name="textColorSelected">#EB625D</color>
     <color name="textColorLink">#2872DB</color>
-    <color name="textColorActive">#4EBA8C</color>
+    <color name="textColorActive">#138644</color>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- - - - - - - - - - - - - - - - - - - Icon colors - - - - - - - - - - - - - - - - - - - - -->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <color name="iconColorPrimary">#010101</color>
-    <color name="iconColorSecondary">#8B8E9D</color>
+    <color name="iconColorPrimary">#000000</color>
+    <color name="iconColorSecondary">#999999</color>
     <color name="iconColorTertiary">#AFACAC</color>
     <color name="iconColorHighlight">#EB625D</color>
     <color name="iconColorSelected">#EB625D</color>
     <color name="iconColorPrimaryInverse">#FFFFFF</color>
     <color name="iconColorDisable">#610C1826</color>
 
-
-    <color name="orange_700">#FF9417</color>
-    <color name="orange_700_33">#33FFB017</color>
-    <color name="red_700">#FF1744</color>
-    <color name="red_700_33">#33FF1744</color>
     <color name="blue_400">#CDD6EA</color>
 </resources>

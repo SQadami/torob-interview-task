@@ -23,6 +23,7 @@
         <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
         <item name="android:textColorSecondary">@color/textColorSecondary</item>
         <item name="android:textColorTertiary">@color/textColorTertiary</item>
+        <item name="android:subtitleTextColor">@color/textColorFourth</item>
         <item name="android:textColorHighlight">@color/textColorHighlight</item>
         <item name="android:textColorHint">@color/textColorHint</item>
         <item name="tabSelectedTextColor">@color/textColorSelected</item>
@@ -105,6 +106,7 @@
         <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
         <item name="android:textColorSecondary">@color/textColorSecondary</item>
         <item name="android:textColorTertiary">@color/textColorTertiary</item>
+        <item name="android:subtitleTextColor">@color/textColorFourth</item>
         <item name="android:textColorHighlight">@color/textColorHighlight</item>
         <item name="android:textColorHint">@color/textColorHint</item>
         <item name="tabSelectedTextColor">@color/textColorSelected</item>
