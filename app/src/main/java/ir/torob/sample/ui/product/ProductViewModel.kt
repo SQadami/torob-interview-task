@@ -13,10 +13,7 @@ import ir.torob.data.model.Product
 import ir.torob.data.model.SimilarEntryWithProduct
 import ir.torob.domain.observers.ObservePagedSimilarProducts
 import ir.torob.domain.observers.ObserveProductDetail
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -45,7 +42,10 @@ class ProductViewModel @Inject constructor(
     val isLoading = _isLoading.asStateFlow()
     val pendingActions = _pendingActions.shareWhileObserved(viewModelScope)
 
-    val productDetail: Flow<Product> = productDetailInteractor.flow
+    val productDetail: Flow<Product> =
+        productDetailInteractor.flow
+            .onStart { _isLoading.value = true }
+            .onCompletion { _isLoading.value = false }
 
     val similarProductPagination: Flow<PagingData<SimilarEntryWithProduct>> =
         similarProductPagingInteractor.flow.cachedIn(viewModelScope)
