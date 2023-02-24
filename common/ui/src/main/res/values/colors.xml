@@ -15,7 +15,7 @@
     <color name="colorBackgroundHolo">#F2F3F5</color>
     <color name="colorSnackBarBackground">#0C1826</color>
     <color name="colorCardBackground">#FFFFFF</color>
-    <color name="colorDivider">#F0F1F5</color>
+    <color name="colorDivider">#E6E6E6</color>
     <color name="colorStroke">#C9CCCE</color>
     <color name="colorError">#FC3D39</color>
     <color name="colorToast">#B30800B6</color>
