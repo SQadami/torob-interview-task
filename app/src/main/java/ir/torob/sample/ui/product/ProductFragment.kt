@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.paging.LoadState
+import androidx.recyclerview.widget.ConcatAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import ir.torob.core.extension.observeWithLifecycle
 import ir.torob.data.model.SimilarEntryWithProduct
@@ -12,6 +13,7 @@ import ir.torob.sample.databinding.FragmentProductBinding
 import ir.torob.sample.ui.product.adapter.ProductGridDecoration
 import ir.torob.sample.ui.product.adapter.ProductLoadStateAdapter
 import ir.torob.sample.ui.product.adapter.SimilarProductAdapter
+import ir.torob.sample.ui.product.detail.ProductDetailAdapter
 import ir.torob.ui.binding.BindingFragment
 import ir.torob.ui.extension.dimenRes
 import ir.torob.ui.widget.snackbar.showSnackBar
@@ -26,7 +28,8 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
             //TODO: show clicked product detail page
         }
     }
-    private val adapter = SimilarProductAdapter(itemClickListener)
+    private val similarProductAdapter = SimilarProductAdapter(itemClickListener)
+    private val productDetailAdapter = ProductDetailAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -40,9 +43,9 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
     }
 
     private fun bindRecyclerView() {
-        val loadStateAdapter = ProductLoadStateAdapter { adapter.retry() }
+        val loadStateAdapter = ProductLoadStateAdapter { similarProductAdapter.retry() }
 
-        adapter.addLoadStateListener { loadState ->
+        similarProductAdapter.addLoadStateListener { loadState ->
             // Toast on any error, regardless of whether it came from RemoteMediator or PagingSource
             val errorState = loadState.source.append as? LoadState.Error
                 ?: loadState.source.prepend as? LoadState.Error
@@ -51,13 +54,19 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
             errorState?.let { showSnackBar("${it.error}") }
         }
 
+
+
         binding.recyclerView.let {
             it.addItemDecoration(
                 ProductGridDecoration(
                     spacing = R.dimen.spacing_grid.dimenRes(requireContext())
                 )
             )
-            it.adapter = adapter.withLoadStateFooter(loadStateAdapter)
+            it.adapter =
+                ConcatAdapter(
+                    productDetailAdapter,
+                    similarProductAdapter.withLoadStateFooter(loadStateAdapter),
+                )
         }
     }
 
@@ -73,8 +82,13 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
                     }
                 }
             }
-            vm.pagedList.observeWithLifecycle(this) {
-                adapter.submitData(lifecycle, it)
+            vm.similarProductPagination.observeWithLifecycle(this) {
+                similarProductAdapter.submitData(lifecycle, it)
+            }
+            vm.productDetail.observeWithLifecycle(this) {
+                productDetailAdapter.setItems(listOf(it))
             }
         }
 }
+
+private const val SPAN_COUNT = 2

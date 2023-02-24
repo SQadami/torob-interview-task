@@ -9,8 +9,10 @@ import androidx.paging.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ir.torob.core.extension.shareWhileObserved
 import ir.torob.core.livedata.Event
+import ir.torob.data.model.Product
 import ir.torob.data.model.SimilarEntryWithProduct
 import ir.torob.domain.observers.ObservePagedSimilarProducts
+import ir.torob.domain.observers.ObserveProductDetail
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -23,7 +25,8 @@ private const val INITIAL_PRODUCT_KEY = "c248e83f-2af8-4957-8a91-5e72a0f3acef"
 
 @HiltViewModel
 class ProductViewModel @Inject constructor(
-    pagingInteractor: ObservePagedSimilarProducts,
+    productDetailInteractor: ObserveProductDetail,
+    similarProductPagingInteractor: ObservePagedSimilarProducts,
     savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -42,11 +45,19 @@ class ProductViewModel @Inject constructor(
     val isLoading = _isLoading.asStateFlow()
     val pendingActions = _pendingActions.shareWhileObserved(viewModelScope)
 
-    val pagedList: Flow<PagingData<SimilarEntryWithProduct>> =
-        pagingInteractor.flow.cachedIn(viewModelScope)
+    val productDetail: Flow<Product> = productDetailInteractor.flow
+
+    val similarProductPagination: Flow<PagingData<SimilarEntryWithProduct>> =
+        similarProductPagingInteractor.flow.cachedIn(viewModelScope)
 
     init {
-        pagingInteractor(ObservePagedSimilarProducts.Params(PAGING_CONFIG, productKey))
+        productDetailInteractor(ObserveProductDetail.Params(productKey))
+        similarProductPagingInteractor(
+            ObservePagedSimilarProducts.Params(
+                PAGING_CONFIG,
+                productKey
+            )
+        )
     }
 
     companion object {
