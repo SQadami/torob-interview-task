@@ -8,6 +8,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 
 abstract class BindingFragment<B : ViewDataBinding>(
     @LayoutRes private val layoutRes: Int
@@ -42,7 +43,23 @@ abstract class BindingFragment<B : ViewDataBinding>(
      */
     override fun onDestroyView() {
         super.onDestroyView()
+        _binding?.let { findAndDetachRecyclerViewAdapter(it.root) }
         _binding = null
+    }
+
+    /**
+     * use this method to prevent from memory leak
+     */
+    private fun findAndDetachRecyclerViewAdapter(view: View) {
+        when (view) {
+            is RecyclerView -> view.adapter = null
+            is ViewGroup -> {
+                for (c in 0 until view.childCount) {
+                    val child = view.getChildAt(c)
+                    findAndDetachRecyclerViewAdapter(child)
+                }
+            }
+        }
     }
 
     open fun B.initialize() {}
