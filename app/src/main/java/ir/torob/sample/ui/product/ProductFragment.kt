@@ -13,9 +13,9 @@ import ir.torob.core.extension.observeWithLifecycle
 import ir.torob.data.model.SimilarEntryWithProduct
 import ir.torob.sample.R
 import ir.torob.sample.databinding.FragmentProductBinding
-import ir.torob.sample.ui.product.adapter.ProductGridDecoration
-import ir.torob.sample.ui.product.adapter.ProductLoadStateAdapter
-import ir.torob.sample.ui.product.adapter.SimilarProductAdapter
+import ir.torob.sample.ui.product.similar.SimilarProductDecoration
+import ir.torob.sample.ui.product.similar.SimilarProductLoadAdapter
+import ir.torob.sample.ui.product.similar.SimilarProductAdapter
 import ir.torob.sample.ui.product.detail.ProductDetailAdapter
 import ir.torob.sample.util.navArgs
 import ir.torob.ui.binding.BindingFragment
@@ -59,7 +59,7 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
         }
 
     private fun bindRecyclerView() {
-        val loadStateAdapter = ProductLoadStateAdapter { similarProductAdapter.retry() }
+        val loadStateAdapter = SimilarProductLoadAdapter { similarProductAdapter.retry() }
 
         similarProductAdapter.addLoadStateListener { loadState ->
             // Toast on any error, regardless of whether it came from RemoteMediator or PagingSource
@@ -72,7 +72,7 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
 
         binding.recyclerView.let {
             it.addItemDecoration(
-                ProductGridDecoration(
+                SimilarProductDecoration(
                     spacing = R.dimen.spacing_grid.dimenRes(requireContext())
                 )
             )

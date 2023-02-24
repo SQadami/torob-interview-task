@@ -1,4 +1,4 @@
-package ir.torob.sample.ui.product.adapter
+package ir.torob.sample.ui.product.similar
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,8 +9,8 @@ import ir.torob.sample.databinding.RowLoadStateLayoutBinding
 import ir.torob.ui.extension.onClick
 import ir.torob.ui.extension.visibleIf
 
-class ProductLoadStateAdapter(private val retry: () -> Unit) :
-    LoadStateAdapter<ProductLoadStateAdapter.LoadStateViewHolder>() {
+class SimilarProductLoadAdapter(private val retry: () -> Unit) :
+    LoadStateAdapter<SimilarProductLoadAdapter.LoadStateViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, loadState: LoadState) =
         LoadStateViewHolder(

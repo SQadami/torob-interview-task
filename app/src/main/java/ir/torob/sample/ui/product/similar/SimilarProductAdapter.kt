@@ -1,4 +1,4 @@
-package ir.torob.sample.ui.product.adapter
+package ir.torob.sample.ui.product.similar
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,10 +1,10 @@
-package ir.torob.sample.ui.product.adapter
+package ir.torob.sample.ui.product.similar
 
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class ProductGridDecoration(
+class SimilarProductDecoration(
     private val spanCount: Int = 2,
     private val spacing: Int = 0,
     private val includeEdge: Boolean = true
