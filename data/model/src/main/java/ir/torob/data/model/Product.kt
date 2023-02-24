@@ -25,3 +25,17 @@ data class Product(
     @Ignore
     constructor() : this(0)
 }
+
+fun Product.sameContent(that: Product) =
+    this.name1 == that.name1 &&
+            this.name2 == that.name2 &&
+            this.imageUrl == that.imageUrl &&
+            this.priceText == that.priceText &&
+            this.shopText == that.shopText
+
+fun Product.emptyContent() =
+    name1.isNullOrEmpty() &&
+            name2.isNullOrEmpty() &&
+            imageUrl.isNullOrEmpty() &&
+            priceText.isNullOrEmpty() &&
+            shopText.isNullOrEmpty()

@@ -6,6 +6,7 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import ir.torob.data.model.SimilarEntryWithProduct
+import ir.torob.data.model.sameContent
 import ir.torob.imageloader.binding.bind
 import ir.torob.sample.R
 import ir.torob.sample.databinding.RowItemProductBinding
@@ -68,17 +69,15 @@ class SimilarProductAdapter(
             oldItem: SimilarEntryWithProduct,
             newItem: SimilarEntryWithProduct
         ): Boolean {
-            return oldItem.product.randomKey == newItem.product.randomKey
+            return oldItem.entry.productKey == newItem.entry.productKey &&
+                    oldItem.entry.similarKey == newItem.entry.similarKey &&
+                    oldItem.entry.page == newItem.entry.page
         }
 
         override fun areContentsTheSame(
             oldItem: SimilarEntryWithProduct,
             newItem: SimilarEntryWithProduct
-        ): Boolean {
-            return oldItem.entry.productKey == newItem.entry.productKey &&
-                    oldItem.entry.similarKey == newItem.entry.similarKey &&
-                    oldItem.entry.page == newItem.entry.page
-        }
+        ) = oldItem.similar.sameContent(newItem.similar)
     }
 
     interface OnItemClickListener {

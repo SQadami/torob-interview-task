@@ -1,6 +1,7 @@
 package ir.torob.data.product.detail
 
 import ir.torob.data.model.Product
+import ir.torob.data.model.emptyContent
 import ir.torob.db.DatabaseTransactionRunner
 import ir.torob.db.dao.ProductDao
 import kotlinx.coroutines.flow.map
@@ -51,14 +52,3 @@ class ProductDetailStore @Inject constructor(
         deleteAll = productDao::deleteAll,
     ),
 ).build()
-
-/**
- * The empty product in db created to fix relation issue when we try to insert similar products
- * This method checks the condition to try load product from remote
- */
-private fun Product.emptyContent() =
-    name1.isNullOrEmpty() &&
-            name2.isNullOrEmpty() &&
-            imageUrl.isNullOrEmpty() &&
-            priceText.isNullOrEmpty() &&
-            shopText.isNullOrEmpty()
