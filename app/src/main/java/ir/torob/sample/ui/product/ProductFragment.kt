@@ -37,9 +37,8 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
         }
     }
     private val similarProductAdapter = SimilarProductAdapter(itemClickListener)
-    private val productDetailAdapter = ProductDetailAdapter().apply {
-        initProductDetail(args.productKey)
-    }
+    private val productDetailAdapter = ProductDetailAdapter(args.productKey)
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

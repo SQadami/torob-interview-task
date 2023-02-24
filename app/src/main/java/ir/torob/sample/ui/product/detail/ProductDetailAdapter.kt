@@ -2,14 +2,17 @@ package ir.torob.sample.ui.product.detail
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.RecyclerView
 import ir.torob.data.model.Product
 import ir.torob.sample.databinding.RowItemProductDetailBinding
-import ir.torob.ui.widget.recyclerview.RecyclerViewAdapter
 
-class ProductDetailAdapter : RecyclerViewAdapter<ProductDetailViewHolder, Product>() {
+class ProductDetailAdapter(
+    initialProductKey: String
+) : RecyclerView.Adapter<ProductDetailViewHolder>() {
 
-    override val asyncDiffer = AsyncListDiffer(this, ProductDetailDiffCallback())
+    private val items: MutableList<Product> = mutableListOf(Product(randomKey = initialProductKey))
+
+    override fun getItemCount() = items.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ProductDetailViewHolder(
@@ -17,16 +20,13 @@ class ProductDetailAdapter : RecyclerViewAdapter<ProductDetailViewHolder, Produc
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            ), this
+            )
         )
 
     override fun onBindViewHolder(
         viewHolder: ProductDetailViewHolder,
         position: Int
-    ) {
-        val item = asyncDiffer.currentList[position]
-        viewHolder.bind(item)
-    }
+    ) = viewHolder.bind(items[position])
 
     override fun onBindViewHolder(
         viewHolder: ProductDetailViewHolder,
@@ -40,12 +40,8 @@ class ProductDetailAdapter : RecyclerViewAdapter<ProductDetailViewHolder, Produc
             viewHolder.updateProduct(product)
         }
 
-    fun initProductDetail(productKey: String) {
-        setItems(listOf(Product(randomKey = productKey)))
-    }
-
     fun setProduct(product: Product) {
-        asyncDiffer.submitList(listOf(product))
+        items[0] = product
         notifyItemChanged(0, product)
     }
 }
