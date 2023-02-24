@@ -1,6 +1,7 @@
 package ir.torob.imageloader
 
 import android.content.Context
+import android.os.Debug
 import android.util.Log
 import com.bumptech.glide.Glide
 import com.bumptech.glide.GlideBuilder
@@ -40,7 +41,7 @@ class AppGlideModule : com.bumptech.glide.module.AppGlideModule() {
     }
 
     override fun applyOptions(context: Context, builder: GlideBuilder) {
-        if (BuildConfig.DEBUG) {
+        if (Debug.isDebuggerConnected()) {
             builder.setLogLevel(Log.DEBUG)
         }
     }
