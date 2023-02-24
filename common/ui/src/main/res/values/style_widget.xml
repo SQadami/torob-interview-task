@@ -46,7 +46,7 @@
         <item name="android:minWidth">32dp</item>
     </style>
 
-    <style name="Widget.Button.ImageButton.Appbar" parent="Base.Widget.Button.ImageButton">
+    <style name="Widget.Button.ImageButton.Appbar" parent="Widget.Button.ImageButton">
         <item name="android:layout_height">?actionBarSize</item>
         <item name="android:layout_width">?actionBarSize</item>
     </style>

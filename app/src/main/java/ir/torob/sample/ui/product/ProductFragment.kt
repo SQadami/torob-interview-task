@@ -19,6 +19,7 @@ import ir.torob.sample.ui.product.adapter.SimilarProductAdapter
 import ir.torob.sample.ui.product.detail.ProductDetailAdapter
 import ir.torob.ui.binding.BindingFragment
 import ir.torob.ui.extension.dimenRes
+import ir.torob.ui.extension.onClick
 import ir.torob.ui.extension.visibleIf
 import ir.torob.ui.widget.recyclerview.layout_manager.GridManager
 import ir.torob.ui.widget.snackbar.showSnackBar
@@ -44,8 +45,15 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
     }
 
     private fun bindViews() {
+        bindAppbar()
         bindRecyclerView()
     }
+
+    private fun bindAppbar() =
+        with(binding.layoutAppbar) {
+            btnBack.visibleIf(findNavController().backQueue.size > 2, gone = false)
+            btnBack.onClick { findNavController().navigateUp() }
+        }
 
     private fun bindRecyclerView() {
         val loadStateAdapter = ProductLoadStateAdapter { similarProductAdapter.retry() }
@@ -89,6 +97,7 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
                 similarProductAdapter.submitData(lifecycle, it)
             }
             vm.productDetail.observeWithLifecycle(this) {
+                binding.layoutAppbar.title.text = it.name1
                 productDetailAdapter.setItems(listOf(it))
             }
         }

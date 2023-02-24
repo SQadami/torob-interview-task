@@ -45,7 +45,7 @@ class ProductViewModel @Inject constructor(
     val productDetail: Flow<Product> =
         productDetailInteractor.flow
             .onStart { _isLoading.value = true }
-            .onCompletion { _isLoading.value = false }
+            .onEach { _isLoading.value = false }
 
     val similarProductPagination: Flow<PagingData<SimilarEntryWithProduct>> =
         similarProductPagingInteractor.flow.cachedIn(viewModelScope)
