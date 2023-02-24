@@ -29,6 +29,7 @@ cacheFixPlugin = { id = "org.gradle.android.cache-fix", version = "2.6.5" }
 daggerHilt = "com.google.dagger.hilt.android:2.45"
 ksp = "com.google.devtools.ksp:1.8.10-1.0.9"
 spotless = "com.diffplug.spotless:6.15.0"
+safeArgs = "androidx.navigation.safeargs.kotlin:2.5.3"
 
 [libraries]
 javax-inject = "javax.inject:javax.inject:1"

@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.daggerHilt) apply false
+    alias(libs.plugins.safeArgs) apply false
     alias(libs.plugins.cacheFixPlugin) apply false
     alias(libs.plugins.android.lint) apply false
     alias(libs.plugins.android.test) apply false

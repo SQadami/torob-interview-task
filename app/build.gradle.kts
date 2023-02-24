@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.daggerHilt)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.safeArgs)
     alias(libs.plugins.cacheFixPlugin)
 }
 
