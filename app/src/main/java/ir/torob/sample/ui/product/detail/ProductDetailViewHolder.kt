@@ -48,6 +48,6 @@ class ProductDetailViewHolder(
             errorDrawable = R.drawable.ic_image_placeholder,
         )
         name1.text = item.name1
-        name2.text = item.name1
+        name2.text = item.name2
     }
 }
