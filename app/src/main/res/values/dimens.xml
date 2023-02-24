@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="corner_size">4dp</dimen>
+    <dimen name="spacing_grid">12dp</dimen>
+</resources>

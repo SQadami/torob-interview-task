@@ -74,15 +74,24 @@ dependencies {
     implementation(projects.common.ui)
     implementation(projects.common.network)
     implementation(projects.common.imageloader)
+    implementation(projects.data.product)
+    implementation(projects.domain)
+
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata)
 
     implementation(libs.androidx.navigation)
     implementation(libs.androidx.navigation.fragment)
+
+    implementation(libs.androidx.paging.runtime)
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
     implementation(libs.moshi)
     kapt(libs.moshi.codegen)
+
+    debugImplementation(libs.leakCanary)
 }
 
 fun <T : Any> propOrDef(propertyName: String, defaultValue: T): T {
