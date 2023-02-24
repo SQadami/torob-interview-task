@@ -6,6 +6,7 @@ import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ir.torob.sample.databinding.RowLoadStateLayoutBinding
+import ir.torob.ui.extension.onClick
 import ir.torob.ui.extension.visibleIf
 
 class ProductLoadStateAdapter(private val retry: () -> Unit) :
@@ -30,7 +31,7 @@ class ProductLoadStateAdapter(private val retry: () -> Unit) :
     ) : RecyclerView.ViewHolder(binding.root) {
 
         init {
-            binding.btnRetry.setOnClickListener { retry.invoke() }
+            binding.btnRetry.onClick { retry.invoke() }
         }
 
         fun bind(item: LoadState) {

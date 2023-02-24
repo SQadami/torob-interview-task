@@ -10,6 +10,7 @@ import ir.torob.data.model.SimilarEntryWithProduct
 import ir.torob.imageloader.binding.bind
 import ir.torob.sample.R
 import ir.torob.sample.databinding.RowItemProductBinding
+import ir.torob.ui.extension.onClick
 
 class SimilarProductAdapter(
     var listener: OnItemClickListener
@@ -39,7 +40,7 @@ class SimilarProductAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         init {
-            itemView.setOnClickListener {
+            itemView.onClick {
                 adapter.getItem(
                     bindingAdapterPosition
                 )?.let { itemInPosition ->
