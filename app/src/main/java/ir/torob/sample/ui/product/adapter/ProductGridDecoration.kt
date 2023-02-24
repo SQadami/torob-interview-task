@@ -16,7 +16,11 @@ class ProductGridDecoration(
         parent: RecyclerView,
         state: RecyclerView.State
     ) {
-        val position = parent.getChildAdapterPosition(view)
+        val globalPosition = parent.getChildAdapterPosition(view)
+        val viewHolder = parent.getChildViewHolder(view)
+        if (viewHolder !is SimilarProductAdapter.ProductItemViewHolder) return
+
+        val position = globalPosition - 1
         val column = position % spanCount
         if (includeEdge) {
             outRect.left = (column + 1) * spacing / spanCount

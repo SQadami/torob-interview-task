@@ -1,6 +1,5 @@
 package ir.torob.sample.ui.product.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
@@ -44,7 +43,6 @@ class SimilarProductAdapter(
                 adapter.getItem(
                     bindingAdapterPosition
                 )?.let { itemInPosition ->
-                    Log.d("mammad", "item clicked:   ${itemInPosition.similar.name1}")
                     adapter.listener.onItemClicked(itemInPosition)
                 }
             }
