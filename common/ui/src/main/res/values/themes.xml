@@ -53,7 +53,7 @@
         <item name="textAppearanceCaption">@style/TextAppearance.Caption1</item>
         <item name="textAppearanceCaption1">@style/TextAppearance.Caption1</item>
         <item name="textAppearanceCaption2">@style/TextAppearance.Caption2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.Button</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Body2</item>
         <item name="textAppearanceOverline">@style/TextAppearance.Overline</item>
 
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceLargeComponent</item>
@@ -135,7 +135,7 @@
         <item name="textAppearanceCaption">@style/TextAppearance.Caption1</item>
         <item name="textAppearanceCaption1">@style/TextAppearance.Caption1</item>
         <item name="textAppearanceCaption2">@style/TextAppearance.Caption2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.Button</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Body2</item>
         <item name="textAppearanceOverline">@style/TextAppearance.Overline</item>
 
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceLargeComponent</item>

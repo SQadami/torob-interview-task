@@ -61,11 +61,6 @@
         <item name="fontFamily">@font/font_bold</item>
     </style>
 
-    <style name="TextAppearance.Button" parent="">
-        <item name="android:textSize">14sp</item>
-        <item name="fontFamily">@font/font_medium</item>
-    </style>
-
     <style name="TextAppearance.Overline" parent="">
         <item name="android:textSize">10sp</item>
         <item name="fontFamily">@font/font_regular</item>
