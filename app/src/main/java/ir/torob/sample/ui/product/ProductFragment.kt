@@ -3,6 +3,7 @@ package ir.torob.sample.ui.product
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.GridLayoutManager
@@ -29,7 +30,7 @@ class ProductFragment : BindingFragment<FragmentProductBinding>(R.layout.fragmen
 
     private val itemClickListener = object : SimilarProductAdapter.OnItemClickListener {
         override fun onItemClicked(product: SimilarEntryWithProduct) {
-            //TODO: show clicked product detail page
+            findNavController().navigateToProduct(product.similar.randomKey!!)
         }
     }
     private val similarProductAdapter = SimilarProductAdapter(itemClickListener)
