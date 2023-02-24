@@ -1,5 +1,6 @@
 package ir.torob.db.room
 
+import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
@@ -18,7 +19,10 @@ import ir.torob.db.room.dao.RoomSimilarDao
         Product::class,
         SimilarProductEntry::class,
     ],
-    version = 1,
+    autoMigrations = [
+        AutoMigration(from = 1, to = 2),
+    ],
+    version = 2,
 )
 @TypeConverters(RoomTypeConverters::class)
 abstract class ProductRoomDatabase : RoomDatabase(), ProductDatabase {

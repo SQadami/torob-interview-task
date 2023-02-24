@@ -18,14 +18,14 @@ abstract class RoomSimilarDao : SimilarDao,
     abstract override fun entry(productKey: String, similarKey: String): SimilarProductEntry
 
     @Transaction
-    @Query("SELECT * FROM similar_products WHERE page = :page AND product_key = :productKey ORDER BY id ASC")
+    @Query("SELECT * FROM similar_products WHERE page = :page AND product_key = :productKey ORDER BY remote_index ASC")
     abstract override fun entriesObservable(
         productKey: String, page: Int
     ): Flow<List<SimilarEntryWithProduct>>
 
     @Transaction
-    @Query("SELECT * FROM similar_products ORDER BY page ASC, id ASC")
-    abstract override fun entriesPagingSource(): PagingSource<Int, SimilarEntryWithProduct>
+    @Query("SELECT * FROM similar_products WHERE product_key = :productKey ORDER BY page ASC, remote_index ASC")
+    abstract override fun entriesPagingSource(productKey: String): PagingSource<Int, SimilarEntryWithProduct>
 
     @Query("DELETE FROM similar_products WHERE page = :page AND product_key = :productKey")
     abstract override suspend fun deletePageByProductKey(page: Int, productKey: String)

@@ -55,6 +55,7 @@ class SimilarProductStore @Inject constructor(
                         productKey = key.productKey,
                         page = key.page,
                         similarKey = it.randomKey!!,
+                        index = response.indexOf(it)
                     )
                 }.forEach {
                     similarDao.insertIfNotExist(it)

@@ -7,6 +7,7 @@ import androidx.room.*
     indices = [
         Index(value = ["product_key"], unique = false),
         Index(value = ["similar_key"], unique = false),
+        Index(value = ["remote_index"], unique = false),
     ],
     foreignKeys = [
         ForeignKey(
@@ -23,4 +24,5 @@ data class SimilarProductEntry(
     @ColumnInfo(name = "product_key") override val productKey: String,
     @ColumnInfo(name = "page") override val page: Int,
     @ColumnInfo(name = "similar_key") val similarKey: String,
+    @ColumnInfo(name = "remote_index", defaultValue = "0") val index: Int,
 ) : PaginatedEntry

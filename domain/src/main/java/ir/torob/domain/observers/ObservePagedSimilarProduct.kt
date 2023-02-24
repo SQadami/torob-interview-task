@@ -31,7 +31,7 @@ class ObservePagedSimilarProducts @Inject constructor(
                     ),
                 )
             },
-            pagingSourceFactory = similarDao::entriesPagingSource,
+            pagingSourceFactory = { similarDao.entriesPagingSource(params.productKey) },
         ).flow
     }
 

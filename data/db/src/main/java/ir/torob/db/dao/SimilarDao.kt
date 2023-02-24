@@ -9,7 +9,7 @@ interface SimilarDao : PaginatedEntryDao<SimilarProductEntry, SimilarEntryWithPr
 
     fun entry(productKey: String, similarKey: String): SimilarProductEntry?
     fun entriesObservable(productKey: String, page: Int): Flow<List<SimilarEntryWithProduct>>
-    fun entriesPagingSource(): PagingSource<Int, SimilarEntryWithProduct>
+    fun entriesPagingSource(productKey: String,): PagingSource<Int, SimilarEntryWithProduct>
     suspend fun deletePageByProductKey(page: Int, productKey: String)
     override suspend fun deletePage(page: Int)
     override suspend fun deleteAll()
