@@ -3,10 +3,6 @@
 
     <dimen name="divider_height">1px</dimen>
     <dimen name="stroke_width">0.5dp</dimen>
-    <dimen name="stroke_thick">1.5dp</dimen>
-    <dimen name="checkbox">32dp</dimen>
-    <dimen name="modal_top_margin">-24dp</dimen>
-    <dimen name="toolbar_title_image_drawable">42dp</dimen>
 
     <!---->
     <!-- Spacing -->
