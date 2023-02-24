@@ -2,6 +2,8 @@ package ir.torob.data.product.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import ir.torob.data.model.Product
+import java.util.*
 
 @JsonClass(generateAdapter = true)
 data class ProductDto(
@@ -12,3 +14,14 @@ data class ProductDto(
     @Json(name = "price_text") val priceText: String? = null,
     @Json(name = "shop_text") val shopText: String? = null,
 )
+
+fun ProductDto.toModel() =
+    Product(
+        id = Objects.hash(this.randomKey!!).toLong(),
+        randomKey = this.randomKey,
+        name1 = this.name1,
+        name2 = this.name2,
+        imageUrl = this.imageUrl,
+        priceText = this.priceText,
+        shopText = this.shopText,
+    )

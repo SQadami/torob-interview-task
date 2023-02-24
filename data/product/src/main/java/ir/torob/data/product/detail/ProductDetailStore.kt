@@ -34,6 +34,7 @@ class ProductDetailStore @Inject constructor(
         reader = { productKey ->
             productDao.getProductWithKeyFlow(productKey).map {
                 when {
+                    it.emptyContent() -> null
                     // If the request is expired, our data is stale
                     lastRequestStore.isRequestExpired(productKey, 2.days) -> null
                     // Otherwise, our data is fresh and valid
@@ -50,3 +51,14 @@ class ProductDetailStore @Inject constructor(
         deleteAll = productDao::deleteAll,
     ),
 ).build()
+
+/**
+ * The empty product in db created to fix relation issue when we try to insert similar products
+ * This method checks the condition to try load product from remote
+ */
+private fun Product.emptyContent() =
+    name1.isNullOrEmpty() &&
+            name2.isNullOrEmpty() &&
+            imageUrl.isNullOrEmpty() &&
+            priceText.isNullOrEmpty() &&
+            shopText.isNullOrEmpty()
