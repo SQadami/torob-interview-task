@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.Transformation
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
@@ -95,7 +96,7 @@ fun ImageView.bind(
 fun cornerRadiusTransform(radius: Int) =
     RequestOptions().optionalTransform(
         MultiTransformation(
-            CenterCrop(),
+            CenterInside(),
             RoundedCorners(radius)
         )
     )

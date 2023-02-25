@@ -7,7 +7,6 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ir.torob.core.extension.shareWhileObserved
 import ir.torob.data.model.Product
 import ir.torob.data.model.SimilarEntryWithProduct
 import ir.torob.domain.observers.ObservePagedSimilarProducts
@@ -25,8 +24,7 @@ class ProductViewModel @Inject constructor(
 
     private val productKey = savedStateHandle.productKey()
 
-    val productDetail: Flow<Product> =
-        productDetailInteractor.flow.shareWhileObserved(viewModelScope)
+    val productDetail: Flow<Product> = productDetailInteractor.flow
 
     val similarProductPagination: Flow<PagingData<SimilarEntryWithProduct>> =
         similarProductPagingInteractor.flow.cachedIn(viewModelScope)
