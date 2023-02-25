@@ -20,16 +20,9 @@ class ProductDetailStore @Inject constructor(
 ) : Store<String, Product> by StoreBuilder.from(
 
     fetcher = Fetcher.of { productKey: String ->
-        val savedProduct = productDao.getProductWithKey(productKey)
-
-        val productResult =
-            runCatching { productDetailDataSource.getProductDetail(savedProduct!!.randomKey!!) }
-        if (productResult.isSuccess) {
+        productDetailDataSource.getProductDetail(productKey).also {
             lastRequestStore.updateLastRequest(productKey)
-            return@of productResult.getOrThrow()
         }
-
-        throw productResult.exceptionOrNull()!!
     },
     sourceOfTruth = SourceOfTruth.of(
         reader = { productKey ->

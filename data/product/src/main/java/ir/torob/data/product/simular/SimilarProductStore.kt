@@ -26,7 +26,9 @@ class SimilarProductStore @Inject constructor(
             productKey = key.productKey,
             page = key.page,
             pageSize = key.pageSize,
-        ).also { lastRequestStore.updateLastRequest(key.productKey) }
+        ).also {
+            lastRequestStore.updateLastRequest(key.productKey)
+        }
     },
     sourceOfTruth = SourceOfTruth.of(
         reader = { key: SimilarProductStoreKey ->
